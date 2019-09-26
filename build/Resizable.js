@@ -48,7 +48,7 @@ var Resizable = function (_React$Component) {
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  Resizable.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+  Resizable.prototype.UNSAFE_componentWillReceiveProps = function UNSAFE_componentWillReceiveProps(nextProps) {
     // If parent changes height/width, set that in our state.
     if (!this.state.resizing && (nextProps.width !== this.props.width || nextProps.height !== this.props.height)) {
       this.setState({
