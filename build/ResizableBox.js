@@ -59,11 +59,11 @@ var ResizableBox = function (_React$Component) {
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  ResizableBox.prototype.UNSAFE_componentWillReceiveProps = function UNSAFE_componentWillReceiveProps(nextProps) {
-    if (nextProps.width !== this.props.width || nextProps.height !== this.props.height) {
+  ResizableBox.prototype.componentDidUpdate = function componentDidUpdate(prevProps) {
+    if (prevProps.width !== this.props.width || prevProps.height !== this.props.height) {
       this.setState({
-        width: nextProps.width,
-        height: nextProps.height
+        width: this.props.width,
+        height: this.props.height
       });
     }
   };
