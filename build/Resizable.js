@@ -48,12 +48,12 @@ var Resizable = function (_React$Component) {
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  Resizable.prototype.UNSAFE_componentWillReceiveProps = function UNSAFE_componentWillReceiveProps(nextProps) {
+  Resizable.prototype.componentDidUpdate = function componentDidUpdate(prevProps) {
     // If parent changes height/width, set that in our state.
-    if (!this.state.resizing && (nextProps.width !== this.props.width || nextProps.height !== this.props.height)) {
+    if (!this.state.resizing && (prevProps.width !== this.props.width || prevProps.height !== this.props.height)) {
       this.setState({
-        width: nextProps.width,
-        height: nextProps.height
+        width: this.props.width,
+        height: this.props.height
       });
     }
   };
@@ -151,7 +151,7 @@ var Resizable = function (_React$Component) {
       }
       var prevClient = _this2.state.prevClient;
 
-      // Calculate true deltas, this is needed to fix an issue with react-draggable not providing 
+      // Calculate true deltas, this is needed to fix an issue with react-draggable not providing
       // correct deltas on move
 
       deltaX = prevClient[0] ? inverted ? prevClient[0] - clientX : clientX - prevClient[0] : deltaX;
