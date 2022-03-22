@@ -1,5 +1,5 @@
 {
-  "name": "react-resizable",
+  "name": "@enverus/react-resizable",
   "version": "1.8.1",
   "description": "A component that is resizable with handles.",
   "main": "index.js",
@@ -63,10 +63,6 @@
     "react-dom": "0.14.x || 15.x || 16.x"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
-  "pre-commit": [
-    "lint",
-    "validate"
-  ]
+    "registry": "https://pkgs.dev.azure.com/navport/prism/_packaging/prism/npm/registry/"
+  }
 }
